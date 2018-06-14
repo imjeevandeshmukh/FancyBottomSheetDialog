@@ -2,7 +2,8 @@
 An Android library to build bottom sheet dialog.
 
 ---
-
+[![API](https://img.shields.io/badge/API-15%2B-green.svg?style=flat-square)](https://android-arsenal.com/api?level=15)
+---
 ## Releases:
 
 #### Current release: 1.0

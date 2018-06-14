@@ -1,88 +1,141 @@
-# Project Title
+# DialogSheet
+An Android library to create fully material designed bottom dialogs similar to the Android Pay app.
 
-FancyBottomSheetDialog
+---
 
-## Getting Started
+## Releases:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+#### Current release: 1.0.5.
 
-### Prerequisites
+You can see all the library releases [here](https://github.com/marcoscgdev/DialogSheet/releases).
 
-What things you need to install the software and how to install them
+---
 
-```
-Give examples
-```
+## Screenshots
+<kbd><img src="https://raw.githubusercontent.com/marcoscgdev/DialogSheet/master/screenshots/1.png" width="350"></kbd>&nbsp;&nbsp;&nbsp;&nbsp;<kbd><img src="https://raw.githubusercontent.com/marcoscgdev/DialogSheet/master/screenshots/2.png" width="350"></kbd>
 
-### Installing
+<kbd><img src="https://raw.githubusercontent.com/marcoscgdev/DialogSheet/master/screenshots/3.png" width="620"></kbd>
 
-A step by step series of examples that tell you how to get a development env running
+Download the sample apk [here](https://github.com/marcoscgdev/DialogSheet/releases/download/1.0.4/app-debug.apk).
 
-Say what the step will be
+---
 
-```
-Give the example
-```
+## Usage:
 
-And repeat
+### Adding the depencency
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Add this to your root *build.gradle* file:
 
 ```
-Give an example
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+Now add the dependency to your app build.gradle file:
 
 ```
-Give an example
+compile 'com.github.marcoscgdev:DialogSheet:1.0.5'
 ```
 
-## Deployment
+### Creating the dialog with Java
 
-Add additional notes about how to deploy this on a live system
+Here is a complete snippet of it usage:
 
-## Built With
+```java
+new DialogSheet(this)
+    .setTitle(R.string.app_name)
+    .setMessage(R.string.lorem)
+    .setCancelable(false)
+    .setPositiveButton(android.R.string.ok, new DialogSheet.OnPositiveClickListener() {
+        @Override
+        public void onClick(View v) {
+            // Your action
+        }
+    })
+    .setNegativeButton(android.R.string.cancel, new DialogSheet.OnNegativeClickListener() {
+        @Override
+        public void onClick(View v) {
+            // Your action
+        }
+    })
+    .setBackgroundColor(Color.BLACK) // Your custom background color
+    .setButtonsColorRes(R.color.colorPrimary)  // Default color is accent
+    .show();
+```
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+### Creating the dialog with Kotlin
 
-## Contributing
+Here is a complete snippet of it usage:
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+```java
+val dialogSheet:DialogSheet = DialogSheet(this@MainActivity)
+dialogSheet.setCancelable(false)
+    .setTitle(R.string.app_name)
+    .setMessage(R.string.lorem)
+    .setCancelable(false)
+    .setPositiveButton(android.R.string.ok) {
+        // Your action
+    }
+    .setNegativeButton(android.R.string.cancel) {
+        // Your action
+    }
+    .setBackgroundColor(Color.BLACK) // Your custom background color
+    .setButtonsColorRes(R.color.colorPrimary)  // Default color is accent
+    .show()
+```
 
-## Versioning
+#### (TIP) Adding a custom view:
+ 
+  - Via inflated view:
+  
+  ```java
+  View view = View.inflate(context, R.layout.custom_dialog_view, null);
+  dialogSheet.setView(view);
+  ```
+  
+  - Via layout resource:
+ 
+ ```java
+ dialogSheet.setView(R.layout.custom_dialog_view);
+ 
+ // Access dialog custom inflated view
+View inflatedView = dialogSheet.getInflatedView();
+Button button = (Button) inflatedView.findViewById(R.id.customButton);
+...
+ ```
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+---
+>See the *sample project* to clarify any queries you may have.
 
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+```
+The MIT License (MIT)
 
-## Acknowledgments
+Copyright (c) 2017 Marcos Calvo García
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 

@@ -1,4 +1,4 @@
-# DialogSheet
+# FancyBottomSheetDialog
 An Android library to build bottom sheet dialog.
 
 ---
@@ -12,14 +12,14 @@ You can see all the library releases [here](https://github.com/imjeevandeshmukh/
 ---
 
 ## Screenshots
-<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(2).jpeg" width="350"></kbd>&nbsp;&nbsp;&nbsp;&nbsp;
-<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(3).jpeg" width="350"></kbd>
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%206.04.05%20PM%20(1).jpeg" width="350"></kbd>&nbsp;&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://github.com/imjeevandeshmukh/FancyBottomSheetDialog/blob/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%206.04.05%20PM%20(4).jpeg?raw=true" width="350"></kbd>
 
-<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(4).jpeg" width="350"></kbd>
-<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(6).jpeg" width="350"></kbd>
-<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM.jpeg" width="350"></kbd>
+<kbd><img src="https://github.com/imjeevandeshmukh/FancyBottomSheetDialog/blob/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%206.04.05%20PM%20(3).jpeg?raw=true" width="350"></kbd>
+<kbd><img src="https://github.com/imjeevandeshmukh/FancyBottomSheetDialog/blob/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%206.04.05%20PM%20(2).jpeg?raw=true" width="350"></kbd>
+<kbd><img src="https://github.com/imjeevandeshmukh/FancyBottomSheetDialog/blob/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%206.04.05%20PM.jpeg?raw=true" width="350"></kbd>
+---
 Download the sample apk [here](https://github.com/imjeevandeshmukh/FancyBottomSheetDialog/raw/master/app-debug.apk).
-
 ---
 
 ## Usage:

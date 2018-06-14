@@ -1,5 +1,5 @@
 # DialogSheet
-An Android library to create fully material designed bottom dialogs similar to the Android Pay app.
+An Android library to build bottom sheet dialog.
 
 ---
 
@@ -12,10 +12,12 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Dialo
 ---
 
 ## Screenshots
-<kbd><img src="https://raw.githubusercontent.com/marcoscgdev/DialogSheet/master/screenshots/1.png" width="350"></kbd>&nbsp;&nbsp;&nbsp;&nbsp;<kbd><img src="https://raw.githubusercontent.com/marcoscgdev/DialogSheet/master/screenshots/2.png" width="350"></kbd>
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(2).jpeg" width="350"></kbd>&nbsp;&nbsp;&nbsp;&nbsp;
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(3).jpeg" width="350"></kbd>
 
-<kbd><img src="https://raw.githubusercontent.com/marcoscgdev/DialogSheet/master/screenshots/3.png" width="620"></kbd>
-
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(4).jpeg" width="620"></kbd>
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(6).jpeg" width="620"></kbd>
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM.jpeg" width="620"></kbd>
 Download the sample apk [here](https://github.com/marcoscgdev/DialogSheet/releases/download/1.0.4/app-debug.apk).
 
 ---
@@ -27,18 +29,19 @@ Download the sample apk [here](https://github.com/marcoscgdev/DialogSheet/releas
 Add this to your root *build.gradle* file:
 
 ```
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
-}
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 ```
 
 Now add the dependency to your app build.gradle file:
 
 ```
-compile 'com.github.marcoscgdev:DialogSheet:1.0.5'
+ implementation 'com.github.imjeevandeshmukh:FancyBottomSheetDialog:1.0'
+	
 ```
 
 ### Creating the dialog with Java
@@ -46,79 +49,37 @@ compile 'com.github.marcoscgdev:DialogSheet:1.0.5'
 Here is a complete snippet of it usage:
 
 ```java
-new DialogSheet(this)
-    .setTitle(R.string.app_name)
-    .setMessage(R.string.lorem)
-    .setCancelable(false)
-    .setPositiveButton(android.R.string.ok, new DialogSheet.OnPositiveClickListener() {
-        @Override
-        public void onClick(View v) {
-            // Your action
-        }
-    })
-    .setNegativeButton(android.R.string.cancel, new DialogSheet.OnNegativeClickListener() {
-        @Override
-        public void onClick(View v) {
-            // Your action
-        }
-    })
-    .setBackgroundColor(Color.BLACK) // Your custom background color
-    .setButtonsColorRes(R.color.colorPrimary)  // Default color is accent
-    .show();
+new FancyBottomSheetDialog.Builder(this)
+                .setTitle("Alert bottom sheet dialog")
+                .setMessage("This is where we show the information.This is a message.This is where we show message explain or showing the information.")
+                .setBackgroundColor(Color.parseColor("#3F51B5")) //don't use R.color.somecolor
+                .setIcon(R.drawable.ic_pan_tool_black_24dp,true)
+                .isCancellable(false)
+                .OnNegativeClicked(new FancyBottomSheetDialog.FancyBottomSheetDialogListener() {
+                    @Override
+                    public void OnClick() {
+
+                    }
+                })
+                .OnPositiveClicked(new FancyBottomSheetDialog.FancyBottomSheetDialogListener() {
+                    @Override
+                    public void OnClick() {
+
+                    }
+                })
+                .setNegativeBtnText("Cancel")
+                .setPositiveBtnText("Ok")
+                .setPositiveBtnBackground(Color.parseColor("#3F51B5"))//don't use R.color.somecolor
+                .setNegativeBtnBackground(Color.WHITE)//don't use R.color.somecolor
+                .build();
 ```
-
-### Creating the dialog with Kotlin
-
-Here is a complete snippet of it usage:
-
-```java
-val dialogSheet:DialogSheet = DialogSheet(this@MainActivity)
-dialogSheet.setCancelable(false)
-    .setTitle(R.string.app_name)
-    .setMessage(R.string.lorem)
-    .setCancelable(false)
-    .setPositiveButton(android.R.string.ok) {
-        // Your action
-    }
-    .setNegativeButton(android.R.string.cancel) {
-        // Your action
-    }
-    .setBackgroundColor(Color.BLACK) // Your custom background color
-    .setButtonsColorRes(R.color.colorPrimary)  // Default color is accent
-    .show()
-```
-
-#### (TIP) Adding a custom view:
- 
-  - Via inflated view:
-  
-  ```java
-  View view = View.inflate(context, R.layout.custom_dialog_view, null);
-  dialogSheet.setView(view);
-  ```
-  
-  - Via layout resource:
- 
- ```java
- dialogSheet.setView(R.layout.custom_dialog_view);
- 
- // Access dialog custom inflated view
-View inflatedView = dialogSheet.getInflatedView();
-Button button = (Button) inflatedView.findViewById(R.id.customButton);
-...
- ```
-
----
->See the *sample project* to clarify any queries you may have.
-
----
 
 ## License
 
 ```
-The MIT License (MIT)
+MIT License
 
-Copyright (c) 2017 Marcos Calvo García
+Copyright (c) 2018 imjeevandeshmukh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

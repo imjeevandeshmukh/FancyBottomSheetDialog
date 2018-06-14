@@ -5,9 +5,9 @@ An Android library to build bottom sheet dialog.
 
 ## Releases:
 
-#### Current release: 1.0.5.
+#### Current release: 1.0
 
-You can see all the library releases [here](https://github.com/marcoscgdev/DialogSheet/releases).
+You can see all the library releases [here](https://github.com/imjeevandeshmukh/FancyBottomSheetDialog/releases).
 
 ---
 
@@ -15,10 +15,10 @@ You can see all the library releases [here](https://github.com/marcoscgdev/Dialo
 <kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(2).jpeg" width="350"></kbd>&nbsp;&nbsp;&nbsp;&nbsp;
 <kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(3).jpeg" width="350"></kbd>
 
-<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(4).jpeg" width="620"></kbd>
-<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(6).jpeg" width="620"></kbd>
-<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM.jpeg" width="620"></kbd>
-Download the sample apk [here](https://github.com/marcoscgdev/DialogSheet/releases/download/1.0.4/app-debug.apk).
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(4).jpeg" width="350"></kbd>
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM%20(6).jpeg" width="350"></kbd>
+<kbd><img src="https://raw.githubusercontent.com/imjeevandeshmukh/FancyBottomSheetDialog/master/Screenshots/WhatsApp%20Image%202018-06-14%20at%205.41.42%20PM.jpeg" width="350"></kbd>
+Download the sample apk [here](https://github.com/imjeevandeshmukh/FancyBottomSheetDialog/raw/master/app-debug.apk).
 
 ---
 
